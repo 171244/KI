@@ -243,8 +243,10 @@ i {
 
 }
 .box img{
-    width :100%;
+    width : auto !important;
+    height: auto;
 }
+
 @keyframes animate
 {
     0%{

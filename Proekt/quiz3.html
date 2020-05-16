@@ -6,15 +6,14 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <link href="vendor/fontawesome/css/all.css" rel="stylesheet" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
     <link href="css/mine.css" rel="stylesheet" rel="stylesheet">
-    <link href="css/testovi.css" rel="stylesheet" rel="stylesheet">
-    <title>Тестови</title>
-
-
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://surveyjs.azureedge.net/1.7.6/survey.jquery.js"></script>
+    <link href="https://surveyjs.azureedge.net/1.7.6/modern.css" type="text/css" rel="stylesheet"/>
+    <title>Тест 1</title>
 </head>
-
 <body>
+
 <style>
     body {
         background: url("https://thumbs.gfycat.com/AmusedDecentLhasaapso-size_restricted.gif") no-repeat center center fixed;
@@ -27,7 +26,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-mainbg fixed-top">
     <div class="container">
-        <a class="navbar-brand navbar-logo" style="font-size: 20px;margin-left: 70px;"  href="#">Што е програмирање?</a>
+        <a class="navbar-brand navbar-logo" href="#">Тест 3</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars text-white"></i>
         </button>
@@ -44,49 +43,29 @@
                     <a class="nav-link" href="testovi.html"><i class="fas fa-check"></i>Тестови</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="quiz1.html"><i class="fas fa-laptop-code"></i>Што е програмирање?</a>
+                    <a class="nav-link" href="quiz1.html"><i class="fas fa-question"></i>Тест 3</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<br/><br/><br/><br/><br/><br/>
-
-<div class="container p-5 m-5" >
-    <p>
-        Компјутерска програма е збир на упатства што компјутерот ги следи за да заврши задача. „Кодирање“ или „програмирање“
-        значи да ги напише чекор по чекор упатствата што му кажуваат на компјутерот што да прави.
-    </p>
-    <p>
-        Опкружени сме со компјутерски програми. Многу од уредите што ги користиме секој ден се контролирани од нив.
-        Сите овие машини следат чекор-по-чекор инструкции напишани од компјутерски програмер.
-    </p>
-    <p>
-        <b>Мобилни телефони</b> - Програмите овозможуваат да оствариме телефонски повик или да испратиме текстуални пораки. Кога пребаруваме контакт, програма го наоѓа точниот број.
-    </p>
-    <p>
-        <b>Компјутерски софтвер</b> - Сè што прави компјутер, од прелистување на Интернет до пишување документи или свирење музика, работи заради код напишан од компјутерски програмер.
-    </p>
-    <p>
-        <b>Игри</b> - Конзолите се само друг вид компјутер, и сите игри што работат на нив се програми. Сите графики, звуци и контроли се напишани во компјутерски код.
-    </p>
-    <p>
-        <b>Машини за перење</b> - тие се програмирани да следат различни циклуси. Компјутерскиот код контролира колку е топла водата и колку време трае миењето.
-    </p>
-    <p>
-        <b>Автомобили</b> - во некои автомобили, компјутерски програми ја следат брзината, температурата и количината на горивото во резервоарот. Компјутерските програми дури можат да помогнат во контролата на сопирачките за да ги задржат луѓето безбедни.
-    </p>
+<div class="container mt-5 mb-lg-5">
+    <div class="row pb-5 justify-content-center " style="box-shadow: 0 20px 50px rgb(23, 32, 90); border: 2px solid #2a3cad; margin-top: 100px; margin-right: 0.1px; background:rgba(255,255,255, 0.8);">
+        <p class="text-muted mt-5 display-4"><small style="color: rgb(26, 179, 148);">КАКО РАБОТАТ ПРОГРАМИТЕ</small></p>
+        <div id="surveyElement" style="display:inline-block;width:80%;"></div>
+        <div id="surveyResult"></div>
+        <div style="margin-top: -130px;">
+            <img id="x" src="">
+            <img id="y" src="">
+        </div>
+    </div>
 </div>
 
-<section class="mb-0 py-4 text-center text-white bg-info" >
-    <div class="h-100" style="font-size: 13px;">
-        Copyright &copy; FINKI 2020
-    </div>
-</section>
-
 <script>
+
     // ZA NAVBAR
+
     function test(){
         var tabsNewAnim = $('#navbarSupportedContent');
         var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
@@ -125,6 +104,10 @@
     $(".navbar-toggler").click(function(){
         setTimeout(function(){ test(); });
     });
+
+
 </script>
+<script src="js/quiz3.js"></script>
 </body>
+
 </html>

@@ -6,29 +6,53 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <link href="vendor/fontawesome/css/all.css" rel="stylesheet" rel="stylesheet">
-    <title>Програми</title>
-</head>
-<body>
-<nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
-    <div class="container ">
-        <a href="#" class="navbar-brand">Како работат програмите</a>
-    </div>
-    <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLectures" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Лекции
-            </a>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+    <link href="css/mine.css" rel="stylesheet" rel="stylesheet">
+    <link href="css/testovi.css" rel="stylesheet" rel="stylesheet">
+    <title>Тестови</title>
 
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownLectures">
-                <a class="dropdown-item" href="introduction.html">Вовед</a>
-                <a class="dropdown-item" href="programming.html">Што е програмирање?</a>
-                <a class="dropdown-item" href="programs.html">Како работат програмите?</a>
-                <a class="dropdown-item" href="think.html">Мисли како компјутер</a>
-                <a class="dropdown-item" href="games.html">Видови на игри</a>
-            </div>
-        </li>
-        <ul>
+
+</head>
+
+<body>
+<style>
+    body {
+        background: url("https://thumbs.gfycat.com/AmusedDecentLhasaapso-size_restricted.gif") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-mainbg fixed-top">
+    <div class="container">
+        <a class="navbar-brand navbar-logo" style="font-size: 20px;margin-left: 70px;" href="#">Како работат програмите</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="homepageindex.html"><i class="fas fa-home"></i>Почетна</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lekcii.html"><i class="far fa-clone"></i>Лекции</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="testovi.html"><i class="fas fa-check"></i>Тестови</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="quiz1.html"><i class="fas fa-laptop-code"></i>Како работат програмите</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
+
+<br/><br/><br/><br/><br/><br/>
+
 <div class="container m-5 p-5">
     <p>
         Компјутерите може да изгледаат многу паметни, но тие всушност се само кутии што ги следат упатствата многу брзо и прецизно.
@@ -67,5 +91,53 @@
     <p>Сите програми конечно се претвораат во „бинарен код“, основен компјутерски јазик што користи само такви и нули.</p>
     <img class="img-fluid" src="img/15.jpg">
 </div>
+
+<section class="mb-0 py-4 text-center text-white bg-info" >
+    <div class="h-100" style="font-size: 13px;">
+        Copyright &copy; FINKI 2020
+    </div>
+</section>
+
+<script>
+    // ZA NAVBAR
+    function test(){
+        var tabsNewAnim = $('#navbarSupportedContent');
+        var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+        var activeItemNewAnim = tabsNewAnim.find('.active');
+        var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+        var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+        var itemPosNewAnimTop = activeItemNewAnim.position();
+        var itemPosNewAnimLeft = activeItemNewAnim.position();
+        $(".hori-selector").css({
+            "top":itemPosNewAnimTop.top + "px",
+            "left":itemPosNewAnimLeft.left + "px",
+            "height": activeWidthNewAnimHeight + "px",
+            "width": activeWidthNewAnimWidth + "px"
+        });
+        $("#navbarSupportedContent").on("click","li",function(e){
+            $('#navbarSupportedContent ul li').removeClass("active");
+            $(this).addClass('active');
+            var activeWidthNewAnimHeight = $(this).innerHeight();
+            var activeWidthNewAnimWidth = $(this).innerWidth();
+            var itemPosNewAnimTop = $(this).position();
+            var itemPosNewAnimLeft = $(this).position();
+            $(".hori-selector").css({
+                "top":itemPosNewAnimTop.top + "px",
+                "left":itemPosNewAnimLeft.left + "px",
+                "height": activeWidthNewAnimHeight + "px",
+                "width": activeWidthNewAnimWidth + "px"
+            });
+        });
+    }
+    $(document).ready(function(){
+        setTimeout(function(){ test(); });
+    });
+    $(window).on('resize', function(){
+        setTimeout(function(){ test(); }, 500);
+    });
+    $(".navbar-toggler").click(function(){
+        setTimeout(function(){ test(); });
+    });
+</script>
 </body>
 </html>
