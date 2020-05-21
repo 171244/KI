@@ -5,10 +5,13 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <link href="vendor/fontawesome/css/all.css" rel="stylesheet" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
     <link href="css/mine.css" rel="stylesheet" rel="stylesheet">
-    <link href="css/testovi.css" rel="stylesheet" rel="stylesheet">
+    <link href="css/coolheading.css" rel="stylesheet" rel="stylesheet">
+    <link href="css/cardsLec1.css" rel="stylesheet" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <title>Тестови</title>
 
 
@@ -22,7 +25,60 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        font-family: 'Balsamiq Sans', cursive;
+        font-size: 20px;
     }
+
+    .text {
+        min-height:auto;
+        height:auto;
+        width: 300px;
+        border:1px solid #ddd; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: 15px 0; overflow:hidden;
+        border-color: rgb(252, 227, 176);
+        background-color: #ffffcc;
+        background-image: url(https://d3dma7a8zw52bz.cloudfront.net/assets/documents/document_body_rules-f0711254a4cc2b734e9317489d363ce2.gif);
+    }
+
+    .content-text {
+        padding:20px 30px 10px;
+    }
+
+    .rainbow-text {
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .ml1 {
+        font-weight: 200;
+        font-size: 2em;
+    }
+
+    .ml1 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+
+    .ml1 .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.1em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em;
+    }
+
+    .ml1 .line {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: gray;
+        transform-origin: 0 0;
+    }
+
+    .ml1 .line1 { top: 0; }
+    .ml1 .line2 { bottom: 0; }
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-mainbg fixed-top">
@@ -33,7 +89,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <div class="hori-selector">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
                 <li class="nav-item">
                     <a class="nav-link" href="homepageindex.html"><i class="fas fa-home"></i>Почетна</a>
                 </li>
@@ -51,32 +110,151 @@
     </div>
 </nav>
 
-<br/><br/><br/><br/><br/><br/>
+<div class="container">
+    <div class="mb-5" style=" box-shadow: 0 20px 50px rgb(23, 32, 90); border: 2px solid #2a3cad;  margin-top: 100px; margin-right: 0.1px; background:rgba(255,255,255, 0.8);">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <main role='main'>
+                    <div aria-busy='true' aria-label='Loading, please wait.' data-text='2' role='progressbar'>
+                        <p>Happy learning!</p>
+                    </div>
+                </main>
+            </div>
+            <div class="col-3">
+                <div class="text">
+                    <div class="content-text">
+                        <h3 style="color: deeppink">
+                            Што ќе научиме?
+                        </h3>
+                        <ul>
+                            <li>Што е програмирање?</li>
+                            <li>Што е компјутерска програма?</li>
+                            <li>Каде има компјутерски програми?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 mr-3">
+                <img src="https://cdn.lowgif.com/small/0e94bf11996244e4-computer-animation-illustrations-and-motion-28-images.gif?fbclid=IwAR0PAqWCTtEy4Slz6q_SJAfu5k31EGYUV4m1jmSLCYPJNTeNXhHACeNHJcU"/>
+            </div>
+            <div class="col-5 ml-5 mt-5 ">
+                <p class="text-justify">
+                    Компјутерска програма е збир на упатства што компјутерот ги следи за да заврши задача. „Кодирање“ или „програмирање“
+                    значи да ги напише чекор по чекор упатствата што му кажуваат на компјутерот што да прави.
+                </p>
+                <img class="w-50 mt-3 " style="margin-left: 100px;" src="https://webstockreview.net/images/clipart-boy-walking-13.png">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-7 mt-5">
+                <p class="text-justify">
+                    Опкружени сме со компјутерски програми. Многу од уредите што ги користиме секој ден се контролирани од нив.
+                    Сите овие машини следат чекор-по-чекор инструкции напишани од компјутерски програмер.
+                </p>
+            </div>
 
-<div class="container p-5 m-5" >
-    <p>
-        Компјутерска програма е збир на упатства што компјутерот ги следи за да заврши задача. „Кодирање“ или „програмирање“
-        значи да ги напише чекор по чекор упатствата што му кажуваат на компјутерот што да прави.
-    </p>
-    <p>
-        Опкружени сме со компјутерски програми. Многу од уредите што ги користиме секој ден се контролирани од нив.
-        Сите овие машини следат чекор-по-чекор инструкции напишани од компјутерски програмер.
-    </p>
-    <p>
-        <b>Мобилни телефони</b> - Програмите овозможуваат да оствариме телефонски повик или да испратиме текстуални пораки. Кога пребаруваме контакт, програма го наоѓа точниот број.
-    </p>
-    <p>
-        <b>Компјутерски софтвер</b> - Сè што прави компјутер, од прелистување на Интернет до пишување документи или свирење музика, работи заради код напишан од компјутерски програмер.
-    </p>
-    <p>
-        <b>Игри</b> - Конзолите се само друг вид компјутер, и сите игри што работат на нив се програми. Сите графики, звуци и контроли се напишани во компјутерски код.
-    </p>
-    <p>
-        <b>Машини за перење</b> - тие се програмирани да следат различни циклуси. Компјутерскиот код контролира колку е топла водата и колку време трае миењето.
-    </p>
-    <p>
-        <b>Автомобили</b> - во некои автомобили, компјутерски програми ја следат брзината, температурата и количината на горивото во резервоарот. Компјутерските програми дури можат да помогнат во контролата на сопирачките за да ги задржат луѓето безбедни.
-    </p>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col text-center">
+                <h5 class="ml1">
+                  <span class="text-wrapper">
+                    <span class="line line1"></span>
+                    <span class="letters text-muted">Примена</span>
+                    <span class="line line2"></span>
+                  </span>
+                </h5>
+            </div>
+        </div>
+
+        <!--small cards-->
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header-blue">
+                            <h1 class="card-heading">Мобилни телефони</h1>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-p ">
+                                Програмите овозможуваат да оствариме телефонски повик или да испратиме текстуални пораки. Кога пребаруваме контакт, програма го наоѓа точниот број.
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header-orange">
+                            <h1 class="card-heading">Компјутерски софтвер</h1>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-p">
+                                Сè што прави компјутер, од прелистување на Интернет до пишување документи или свирење музика, работи заради код напишан од компјутерски програмер.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header-grey">
+                            <h1 class="card-heading">Игри</h1>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-p">
+                                Конзолите се само друг вид компјутер, и сите игри што работат на нив се програми. Сите графики, звуци и контроли се напишани во компјутерски код.
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--row two-->
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header-pink">
+                            <h1 class="card-heading">Машини за перење</h1>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-p">
+                                Тие се програмирани да следат различни циклуси. Компјутерскиот код контролира колку е топла водата и колку време трае миењето.
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header-green">
+                            <h1 class="card-heading">Автомобили</h1>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-p">
+                                Kомпјутерски програми ја следат брзината, температурата и количината на горивото во резервоарот. Дури можат да помогнат во контролата за да ги задржат луѓето безбедни.
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
 </div>
 
 <section class="mb-0 py-4 text-center text-white bg-info" >
@@ -124,6 +302,35 @@
     });
     $(".navbar-toggler").click(function(){
         setTimeout(function(){ test(); });
+    });
+
+    // Wrap every letter in a span
+    var textWrapper = document.querySelector('.ml1 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: true})
+        .add({
+            targets: '.ml1 .letter',
+            scale: [0.3,1],
+            opacity: [0,1],
+            translateZ: 0,
+            easing: "easeOutExpo",
+            duration: 600,
+            delay: (el, i) => 70 * (i+1)
+        }).add({
+        targets: '.ml1 .line',
+        scaleX: [0,1],
+        opacity: [0.5,1],
+        easing: "easeOutExpo",
+        duration: 700,
+        offset: '-=875',
+        delay: (el, i, l) => 80 * (l - i)
+    }).add({
+        targets: '.ml1',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
     });
 </script>
 </body>

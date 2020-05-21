@@ -66,13 +66,15 @@ var json = {
 
 window.survey = new Survey.Model(json);
 
+
 survey
     .onComplete
     .add(function (sender, result) {
         if(sender.getCorrectedAnswerCount() === 3) {
-            document.getElementById("x").src = "https://3.bp.blogspot.com/-OyEmWDoGcO8/XPXDK__E-BI/AAAAAAAMj_c/gzwVO4ASWX8uBYKQvstgWxX5SkBIbdU7gCLcBGAs/s1600/AS0005339_08.gif";
+            document.getElementById("x").src = "https://i.giphy.com/media/IzWQYlSY55xPBzJPyB/giphy.webp";
             //document.getElementById("y").src="https://i.gifer.com/2Qx7.gif";
         }
+
         document
             .querySelector('#surveyResult');
 
