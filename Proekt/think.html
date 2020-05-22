@@ -9,7 +9,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
     <link href="css/mine.css" rel="stylesheet" rel="stylesheet">
     <link href="css/testovi.css" rel="stylesheet" rel="stylesheet">
-    <title>Тестови</title>
+    <link href="css/lectures.css" rel="stylesheet" rel="stylesheet">
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://surveyjs.azureedge.net/1.7.6/survey.jquery.js"></script>
+    <link href="https://surveyjs.azureedge.net/1.7.6/modern.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="css/cardsLec1.css" rel="stylesheet" rel="stylesheet">
+    <link href="css/naslov.css" rel="stylesheet" rel="stylesheet">
+    <title>Мисли како компјутер</title>
 
 
 </head>
@@ -22,7 +29,58 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        font-family: 'Balsamiq Sans', cursive;
+    .text {
+        min-height:auto;
+        height:auto;
+        width: 300px;
+        border:1px solid #ddd; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: 15px 0; overflow:hidden;
+        border-color: rgb(252, 227, 176);
+        background-color: #ffffcc;
+        background-image: url(https://d3dma7a8zw52bz.cloudfront.net/assets/documents/document_body_rules-f0711254a4cc2b734e9317489d363ce2.gif);
     }
+
+    .content-text {
+        padding:20px 30px 10px;
+    }
+
+    .rainbow-text {
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .ml1 {
+        font-weight: 200;
+        font-size: 2em;
+    }
+
+    .ml1 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+
+    .ml1 .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.1em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em;
+    }
+
+    .ml1 .line {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: gray;
+        transform-origin: 0 0;
+    }
+
+    .ml1 .line1 { top: 0; }
+    .ml1 .line2 { bottom: 0; }
+
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-mainbg fixed-top">
@@ -44,7 +102,7 @@
                     <a class="nav-link" href="testovi.html"><i class="fas fa-check"></i>Тестови</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="quiz1.html"><i class="fas fa-laptop-code"></i>Мисли како компјутер</a>
+                    <a class="nav-link" href="quiz4.html"><i class="fas fa-laptop-code"></i>Мисли како компјутер</a>
                 </li>
             </ul>
         </div>
@@ -53,34 +111,141 @@
 
 <br/><br/><br/><br/><br/><br/>
 
-<div class="container m-5 p-5">
-    <p>Програмерот мора да научи да размислува како компјутер. Сите задачи мора да се поделат на мали парчиња за да можат лесно да се следат и невозможно да се погреши.</p>
-    <p>
-        Размислувај како робот - замислете кафуле каде келнерот е робот, роботот има едноставен компјутерски мозок и треба да му се каже како да се извлече од кафе-кујната за да им служи храна на вечера.
-        Прво, процесот треба да се подели на едноставни задачи што компјутерот може да ги разбере.
-    <h6 class="text-primary">Програма за роботи на келнери 1</h6>
-    <p>1. Соберете храна;</p>
-    <p>2. Преместете од кујната до масата;</p>
-    <p>3. Ставете ја храната долу.</p>
-    <h6 class="text-secondary">Користејќи ја оваа програма, роботот ја зграпчува храната од чинијата, се урива директно низ ѕидот на кујната во просторијата за јадење и ја става храната на подот.
-        Инструкциите не се јасни: заборавивме да му кажеме на роботот да ја користи вратата. Можеби им изгледа очигледно на луѓето, но компјутерите не можат сами да мислат</h6>
-    <h6 class="text-primary">Програма за роботи на келнери 2</h6>
-    <p>1. Подигнете ја чинијата со храна на неа;</p>
-    <p>2. Преместете од кујна во трпезариска маса така што :
-        - Поминете на вратата помеѓу кујната и трпезаријата
-        - Поместете од вратата до масата;</p>
-    <p>3. Ставете ја чинијата долу на масата пред вечера.</p>
-    <h6 class="text-secondary">Овој пат му рековме на келнерот робот да ја користи вратата од кујна. Поминува низ вратата, но потоа ја удира кафе мачката, патува и ја крши чинијата на подот.</h6>
-    <h6 class="text-secondary">Оваа програма сè уште не е совршена.
-        Роботот не знае како да се справи со пречките како мачката. Програмата треба да му даде на роботот уште подетални упатства за да може безбедно да се движи.</h6>
-    <h6 class="text-primary">Програма за роботи на келнери 3</h6>
-    <p>1. Соберете ја чинијата со храна на неа држејќи ја на иста висина во секое време;</p>
-    <p>2. Премести од масата на кујната до трпезаријата :
-        - Помини низ вратата помеѓу кујната и просторијата за јадење проверувајќи ги пречките околу нив…;</p>
-    <p>3. Ставете ја чинијата долу на масата пред вечера.</p>
-    <h6 class="text-secondary">Во оваа верзија на програмата, роботот успешно ја доставува храната до масата избегнувајќи какви било пречки.
-        Но, откако ја спушти чинијата долу, роботот останува да стои на масата додека храната се натрупува во кујната.
-        Конечно, роботот може безбедно да ја доставува храната. Но, заборавивме да му дадеме упатства да се врати во кујната и да ја земе следната чинија.</h6>
+<div class="container text-center">
+    <div class="mb-5" style=" box-shadow: 0 20px 50px rgb(23, 32, 90); border: 2px solid #2a3cad;  margin-top: 100px; margin-right: 0.1px; background:rgba(255,255,255, 0.8);">
+
+        <div class="row text-center"  >
+            <div class="col">
+                <main role='main'>
+                    <svg viewBox="0 300 200" >
+                        <!-- Symbol with text -->
+                        <symbol id="s-text">
+                            <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text--line" >
+                                Мисли како компјутер
+                            </text>
+                        </symbol>
+
+                        <!-- Clippath  with text -->
+                        <clippath id="cp-text">
+                            <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text--line">
+                                Мисли како компјутер
+                            </text>
+                        </clippath>
+
+                        <!-- Group for shadow -->
+                        <g clip-path="url(#cp-text)" class="shadow">
+                            <rect width="100%" height="100%" class="anim-shape anim-shape--shadow"></rect>
+                        </g>
+
+                        <!-- Group with clippath for text-->
+                        <g clip-path="url(#cp-text)" class="colortext">
+                            <!-- Animated shapes inside text -->
+                            <rect width="100%" height="100%" class="anim-shape"></rect>
+                            <rect width="80%" height="100%" class="anim-shape"></rect>
+                            <rect width="60%" height="100%" class="anim-shape"></rect>
+                            <rect width="40%" height="100%" class="anim-shape"></rect>
+                            <rect width="20%" height="100%" class="anim-shape"></rect>
+                        </g>
+
+                        <!-- Transparent copy of text to keep patterned text selectable -->
+                        <use xlink:href="#s-text" class="text--transparent"></use>
+                    </svg>
+
+                </main>
+            </div>
+        </div>
+
+
+        <div class="row justify-content-center">
+            <div class="col-4 mr-3">
+                <img src="img/voved2.gif" >
+            </div>
+            <div class="col-5 ml-5 mt-5 ">
+                <li class="text-justify">
+                    Програмерот мора да научи да размислува како компјутер. Сите задачи мора да се поделат на мали парчиња за да можат лесно да се следат
+                    и невозможно да се погреши.
+                </li>
+
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-7 mt-5">
+                <li class="text-justify">
+                    Размислувај како робот - замислете кафуле каде келнерот е робот, роботот има едноставен компјутерски мозок и треба да му се каже како да се извлече од кафе-кујната за да им служи храна на вечера.
+                </li>
+            </div>
+            <div class="col-4 mr-3">
+            <img class="m-3"  src="img/think2.gif" >
+             </div>
+        </div>
+        <div class="row justify-content-center">
+                <div class="row mt-3">
+            <div class="col">
+                <p class="font-italic" style="color: orange">Прво, процесот треба да се подели на едноставни задачи што компјутерот може да ги разбере.</p>
+            </div>
+                 </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="card m-3">
+                    <div class="card-content">
+                        <div class="card-header-pink">
+                            <h1 class="card-heading">Програма за роботи на келнери 1</h1>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-p ">1. Соберете храна;</p>
+                            <p class="card-p">2. Преместете од кујната до масата;</p>
+                            <p class="card-p">3. Ставете ја храната долу.</p>
+                            <h6 class="text-secondary">Користејќи ја оваа програма, роботот ја зграпчува храната од чинијата, се урива директно низ ѕидот на кујната во просторијата за јадење и ја става храната на подот.
+                                Инструкциите не се јасни: заборавивме да му кажеме на роботот да ја користи вратата. Можеби им изгледа очигледно на луѓето, но компјутерите не можат сами да мислат
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card m-3">
+                    <div class="card-content">
+                        <div class="card-header-orange">
+                            <h1 class="card-heading">Програма за роботи на келнери 2</h1>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-p">1. Подигнете ја чинијата со храна на неа;</p>
+                            <p class="card-p">2. Преместете од кујна во трпезариска маса така што :
+                                - Поминете на вратата помеѓу кујната и трпезаријата
+                                - Поместете од вратата до масата;</p>
+                            <p class="card-p">3. Ставете ја чинијата долу на масата пред вечера.</p>
+                            <h6 class="text-secondary">Овој пат му рековме на келнерот робот да ја користи вратата од кујна. Поминува низ вратата, но потоа ја удира кафе мачката, патува и ја крши чинијата на подот.</h6>
+                            <h6 class="text-secondary">Оваа програма сè уште не е совршена.
+                                Роботот не знае како да се справи со пречките како мачката. Програмата треба да му даде на роботот уште подетални упатства за да може безбедно да се движи.
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card m-3">
+                    <div class="card-content">
+                        <div class="card-header-red">
+                            <h1 class="card-heading">Програма за роботи на келнери 3</h1>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-p"> 1. Соберете ја чинијата со храна на неа држејќи ја на иста висина во секое време;</p>
+                            <p class="card-p">2. Премести од масата на кујната до трпезаријата :
+                                - Помини низ вратата помеѓу кујната и просторијата за јадење проверувајќи ги пречките околу нив…;</p>
+                            <p class="card-p">3. Ставете ја чинијата долу на масата пред вечера.</p>
+                            <h6 class="text-secondary">Во оваа верзија на програмата, роботот успешно ја доставува храната до масата избегнувајќи какви било пречки.
+                                Но, откако ја спушти чинијата долу, роботот останува да стои на масата додека храната се натрупува во кујната.
+                                Конечно, роботот може безбедно да ја доставува храната. Но, заборавивме да му дадеме упатства да се врати во кујната и да ја земе следната чинија.
+                            </h6>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <section class="mb-0 py-4 text-center text-white bg-info" >
@@ -88,7 +253,6 @@
         Copyright &copy; FINKI 2020
     </div>
 </section>
-
 <script>
     // ZA NAVBAR
     function test(){

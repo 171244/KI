@@ -6,33 +6,346 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <link href="vendor/fontawesome/css/all.css" rel="stylesheet" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+    <link href="css/mine.css" rel="stylesheet" rel="stylesheet">
+    <link href="css/testovi.css" rel="stylesheet" rel="stylesheet">
+    <link href="css/lectures.css" rel="stylesheet" rel="stylesheet">
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://surveyjs.azureedge.net/1.7.6/survey.jquery.js"></script>
+    <link href="https://surveyjs.azureedge.net/1.7.6/modern.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="css/coolheading.css" rel="stylesheet" rel="stylesheet">
+    <link href="css/cardsLec1.css" rel="stylesheet" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="css/gamesCards.css" rel="stylesheet" rel="stylesheet">
+    <link href="css/coolheading.css" rel="stylesheet" rel="stylesheet">
     <title>Игри</title>
+
+
 </head>
+
 <body>
+<style>
+    body {
+        background: url("https://thumbs.gfycat.com/AmusedDecentLhasaapso-size_restricted.gif") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        font-family: 'Balsamiq Sans', cursive;
+    }
+    .text {
+        min-height:auto;
+        height:auto;
+        width: 300px;
+        border:1px solid #ddd; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: 15px 0; overflow:hidden;
+        border-color: rgb(252, 227, 176);
+        background-color: #ffffcc;
+        background-image: url(https://d3dma7a8zw52bz.cloudfront.net/assets/documents/document_body_rules-f0711254a4cc2b734e9317489d363ce2.gif);
+    }
 
-<nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
-    <div class="container ">
-        <a href="#" class="navbar-brand">Видови игри</a>
+    .content-text {
+        padding:20px 30px 10px;
+    }
+
+    .rainbow-text {
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .ml1 {
+        font-weight: 200;
+        font-size: 2em;
+    }
+
+    .ml1 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+
+    .ml1 .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.1em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em;
+    }
+
+    .ml1 .line {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: gray;
+        transform-origin: 0 0;
+    }
+
+    .ml1 .line1 { top: 0; }
+    .ml1 .line2 { bottom: 0; }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-mainbg fixed-top">
+    <div class="container">
+        <a class="navbar-brand navbar-logo" style="font-size: 20px;margin-left: 70px;" href="#">Игри</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="homepageindex.html"><i class="fas fa-home"></i>Почетна</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lekcii.html"><i class="far fa-clone"></i>Лекции</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="testovi.html"><i class="fas fa-check"></i>Тестови</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="quiz5.html"><i class="fas fa-laptop-code"></i>Игри</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLectures" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Лекции
-            </a>
-
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownLectures">
-                <a class="dropdown-item" href="introduction.html">Вовед</a>
-                <a class="dropdown-item" href="programming.html">Што е програмирање?</a>
-                <a class="dropdown-item" href="programs.html">Како работат програмите?</a>
-                <a class="dropdown-item" href="think.html">Мисли како компјутер</a>
-                <a class="dropdown-item" href="games.html">Видови на игри</a>
-            </div>
-        </li>
-        <ul>
 </nav>
 
-<div>
-    <a href="https://www.youtube.com/watch?v=zfo_McUxzHg&feature=share&fbclid=IwAR0aRYtzH1EpPTQmwTqedAih1O3RolihUp501PIjN-cviGhGwlmWnAdguDM"> NAPISI</a>
+<br/><br/><br/><br/><br/><br/>
+
+<div class="container text-center">
+    <div class="mb-5" style=" box-shadow: 0 20px 50px rgb(23, 32, 90); border: 2px solid #2a3cad;  margin-top: 100px; margin-right: 0.1px; background:rgba(255,255,255, 0.8);">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <main role='main'>
+                    <div aria-busy='true' aria-label='Loading, please wait.' data-text='2' role='progressbar'>
+                        <p>Games</p>
+                    </div>
+                </main>
+            </div>
+            <div class="col-3 mt-5" >
+                <div class="text" >
+                    <div class="content-text">
+                        <h3 style="color: deeppink">
+                            Што ќе научиме?
+                        </h3>
+                        <ul style="font-size: 1.5rem">
+                            <b style="color: #fd7e14">Програмска игра</b> е видео игра која вклучува
+                            елементи на компјутерско програмирање, овозможувајќи му на играчот
+                            да насочува автономни единици во рамките на играта да ги следи командите
+                            на јазик за програмирање специфичен за доменот, честопати претставен како
+                            визуелен јазик за да се поедностави програмската метафора.
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-5 ml-5 mt-5 ">
+            <p class="text-justify">
+            <li>        Програмските игри широко спаѓаат во две области: игри со еден играч каде што програмските
+            елементи или сочинуваат дел од целата puzzle game(игра загатки),
+            и мултиплеер игри каде автоматската програма на играчот е насочена против програмите на другите играчи.</li>
+            <li> Еве ги 9-те најдобри игри за кодирање за да ги подобрите вашите програмски вештини:</li>
+            </p>
+        </div>
+
+
+
+        <div class="container mb-4">
+            <div class="card-deck">
+                <div class="card " style="height: 500px;width: 500px;">
+                    <div class="item">
+                        <img class="card-img-top" src="img/18.png" alt="Card image Codewars" >
+                    </div>
+                    <div class="border-effect bg-warning"></div>
+                    <div class="card-body">
+                        <h4 class="card-title"style="font-size: 2rem;">Codewars</h4>
+                        <p class="card-text" style="font-size: 1.5rem;">Codewars не е игра толку многу како што е направен начин да вежбате кодирање и решавање
+                            на алгоритмички предизвици.</p>
+                        <p class="card-text" style="font-size: 1.5rem;">Добивате поени за комплетирање на загатки, а вредностите на поени се одредуваат
+                            според тоа колку се ефикасни вашите решенија.</p>
+                        <p class="card-text" style="font-size: 1.5rem;">Codewars ви овозможува да гледате решенија доставени од други, од кои можете да ги
+                            проучувате и научите.</p>
+
+                    </div>
+                </div>
+                <div class="card"  style="height: 500px;width: 500px;">
+                    <div class="item">
+                        <img class="card-img-top" src="img/16.png" alt="Card image Codingame">
+                    </div>
+                    <div class="border-effect bg-warning"></div>
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 2rem;">Codingame</h4>
+                        <p class="card-text" style="font-size: 1.5rem;">Codingame е веб-страница како играта каде решавате загатки и предизвици со пишување вистински код.</p>
+                        <p class="card-text" style="font-size: 1.5rem;">Поддржани се над 25 програмски јазици, вклучувајќи Java, C #, Python, JavaScript, Lua, Go, Rust,
+                            и многу повеќе. Секоја загатка / предизвик има тема што го започнува забавниот фактор.</p>
+                    </div>
+                </div>
+                <div class="card" style="height: 500px;width: 500px;">
+                    <div class="item">
+                        <img class="card-img-top" src="img/14r.png" alt="Card image Robocode">
+                    </div>
+                    <div class="border-effect bg-warning"></div>
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 2rem;">Robocode</h4>
+                        <p class="card-text" style="font-size: 1.5rem;">Robocode е комплексна програма за програмирање каде што кодирате резервоари
+                            за роботи кои се борат едни против други.</p>
+                        <p class="card-text" style="font-size: 1.5rem;">Ваша задача е да ја напишете вештачката интелигенција
+                            што ги придвижува вашите роботи кон успехот - користејќи вистински јазици како Java,
+                            Scala, C # и многу повеќе.</p>
+                    </div>
+                </div>
+                <div class="card" style="height: 600px;width: 500px;">
+                    <div class="item">
+                        <img class="card-img-top" src="img/19.jpg" alt="Card image Vim Adventures">
+                    </div>
+                    <div class="border-effect bg-warning"></div>
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 2rem;">Vim Adventures</h4>
+                        <p class="card-text" style="font-size: 1.5rem;">Vim Adventures е забавен туторијал сличен на играта за да научите како да го користите  Vim,
+                            исклучително необичен, но исклучително моќен уредувач на текст, кој многу добрите
+                            програми сакаат да го користат.</p>
+                        <p class="card-text" style="font-size: 1.5rem;">Таа има огромна крива за учење, и затоа постојат програми како овие.</p>
+                        <p class="card-text" style="font-size: 1.5rem;">Значи, додека Вим не е програмски јазик сам по себе, совладување на „Вим“ може да ви
+                            помогне да станете поефикасен програмер, па затоа го вклучив во овој напис.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-deck">
+                <div class="card" style="height: 100%;width: 100%;">
+                    <div class="item">
+                        <img class="card-img-top"src="img/23.jpg" alt="Card image Screeps">
+                    </div>
+                    <div class="border-effect bg-warning"></div>
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 2rem;">Screeps</h4>
+                        <p class="card-text" style="font-size: 1.5rem;">Screeps е MMO стратешка игра каде што користите JavaScript
+                            за да го кодирате однесувањето на ентитетите во игра и да градите империја за себе.</p>
+                        <p class="card-text" style="font-size: 1.5rem;">Основната игра доаѓа со приватен сервер каде што можете
+                            да играте самостојно, плус 30  дена целосен пристап до официјалниот сервер.</p>
+                        <p class="card-text" style="font-size: 1.5rem;">После тоа, можете да продолжите да играте на официјалниот сервер
+                            со ограничен капацитет, што може да се подигне со месечна претплата.</p>
+                    </div>
+                </div>
+                <div class="card" style="height: 100%;width: 100%;">
+                    <div class="item">
+                        <img class="card-img-top" src="img/20.jpg" alt="Card image TIS-100">
+                    </div>
+                    <div class="border-effect bg-warning"></div>
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 2rem;">TIS-100</h4>
+                        <p class="card-text"  style="font-size: 1.5rem;">„Тоа е програма за програмирање на јазик за составување што никогаш не сте ја барале!“.</p>
+                        <p class="card-text" style="font-size: 1.5rem;">TIS-100 е видео игра како ниедна друга, принудувајќи да научите и да користите
+                            подбивна верзија на кодирање на склопување на ниско ниво за да ги решите своите загатки.
+                            Оваа игра не е шега - тешко е, таа е отворена и има неверојатна вредност за
+                            повторување сè додека не станете толку фрустрирани и збунети што ќе ја деинсталирате во склоп на бес.</p>
+                    </div>
+                </div>
+                <div class="card" style="height: 600px;width: 600px;">
+                    <div class="item">
+                        <img class="card-img-top" src="img/21.jpg" alt="Card image Shenzhen I/O">
+                    </div>
+                    <div class="border-effect bg-warning"></div>
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 2rem;">Shenzhen I/O</h4>
+                        <p class="card-text" style="font-size: 1.5rem;">Од истото студио зад TIS-100 доаѓа Shenzhen I/O, загатка игра
+                            каде што имате задача да создадете поедноставени кола и да напишете
+                            поедноставен асемблерски код што работи на споменатите кола.</p>
+                        <p class="card-text" style="font-size: 1.5rem;">Помеѓу двата натпревари, Shenzhen I/O е полесно да се навлезе во и попријатно,
+                            но исто толку задоволително комплексно.</p>
+                    </div>
+                </div>
+                <div class="card" style="height: 100%;width: 100%;">
+                    <div class="item">
+                        <img class="card-img-top" src="img/17.png" alt="Card image Codecombat">
+                    </div>
+                    <div class="border-effect bg-warning"></div>
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 2rem;">Codecombat</h4>
+                        <p class="card-text" style="font-size: 1.5rem;">Codecombat е друга веб-апликација за загатки и предизвици слични
+                            на играта што можат да се решат само со пишување код.</p>
+                        <p class="card-text" style="font-size: 1.5rem;">Но, со оглед на тоа што Codingame е позабавен, Codecombat има
+                            значајно образование наклонето со „Училишна верзија“ што наставниците можат да
+                            ги користат за да им помогнат на своите студенти да научат како да кодираат.</p>
+                        <p class="card-text" style="font-size: 1.5rem;"> Што се однесува до ова пишување, достапни се три патеки за курсеви:
+                            компјутерски науки, развој на веб и развој на игри.</p>
+                    </div>
+                </div>
+                <div class="card" style="height: 100%;width: 100%;">
+                <div class="item">
+                    <img class="card-img-top" src="img/22.jpg" alt="Card image Human Resource Machine">
+                </div>
+                <div class="border-effect bg-warning"></div>
+                <div class="card-body">
+                    <h4 class="card-title" style="font-size: 2rem;">Human Resource Machine</h4>
+                    <p class="card-text" style="font-size: 1.5rem;">Во машината за човечки ресурси, играте како канцелариски работник кој ги завршува
+                        задачите комбинирајќи различни инструкции заедно.</p>
+                    <p class="card-text" style="font-size: 1.5rem;">Во извесна смисла, оваа игра се однесува на решавање на загатки
+                        преку визуелно програмирање, дури и до кога треба да се осврнеме на концепти
+                        како логички проток и управување со меморијата - но претставени на лесен за разбирање,
+                        канцелариски-тематски начин.</p>
+                </div>
+            </div>
+            </div>
+
+        </div>
+
 </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<section class="mb-0 py-4 text-center text-white bg-info" >
+    <div class="h-100" style="font-size: 13px;">
+        Copyright &copy; FINKI 2020
+    </div>
+</section>
+
+<script>
+    // ZA NAVBAR
+    function test(){
+        var tabsNewAnim = $('#navbarSupportedContent');
+        var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+        var activeItemNewAnim = tabsNewAnim.find('.active');
+        var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+        var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+        var itemPosNewAnimTop = activeItemNewAnim.position();
+        var itemPosNewAnimLeft = activeItemNewAnim.position();
+        $(".hori-selector").css({
+            "top":itemPosNewAnimTop.top + "px",
+            "left":itemPosNewAnimLeft.left + "px",
+            "height": activeWidthNewAnimHeight + "px",
+            "width": activeWidthNewAnimWidth + "px"
+        });
+        $("#navbarSupportedContent").on("click","li",function(e){
+            $('#navbarSupportedContent ul li').removeClass("active");
+            $(this).addClass('active');
+            var activeWidthNewAnimHeight = $(this).innerHeight();
+            var activeWidthNewAnimWidth = $(this).innerWidth();
+            var itemPosNewAnimTop = $(this).position();
+            var itemPosNewAnimLeft = $(this).position();
+            $(".hori-selector").css({
+                "top":itemPosNewAnimTop.top + "px",
+                "left":itemPosNewAnimLeft.left + "px",
+                "height": activeWidthNewAnimHeight + "px",
+                "width": activeWidthNewAnimWidth + "px"
+            });
+        });
+    }
+    $(document).ready(function(){
+        setTimeout(function(){ test(); });
+    });
+    $(window).on('resize', function(){
+        setTimeout(function(){ test(); }, 500);
+    });
+    $(".navbar-toggler").click(function(){
+        setTimeout(function(){ test(); });
+    });
+</script>
 </body>
 </html>

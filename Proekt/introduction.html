@@ -7,9 +7,16 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <link href="vendor/fontawesome/css/all.css" rel="stylesheet" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+    <link href="css/lectures.css" rel="stylesheet" rel="stylesheet">
     <link href="css/mine.css" rel="stylesheet" rel="stylesheet">
     <link href="css/testovi.css" rel="stylesheet" rel="stylesheet">
-    <title>Тестови</title>
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://surveyjs.azureedge.net/1.7.6/survey.jquery.js"></script>
+    <link href="https://surveyjs.azureedge.net/1.7.6/modern.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="css/quote.css" rel="stylesheet" rel="stylesheet">
+
+    <title>Вовед</title>
 
 
 </head>
@@ -22,7 +29,60 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        font-family: 'Balsamiq Sans', cursive;
+
     }
+    .text {
+        min-height:auto;
+        height:auto;
+        width: 300px;
+        border:1px solid #ddd; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: 15px 0; overflow:hidden;
+        border-color: rgb(252, 227, 176);
+        background-color: #ffffcc;
+        background-image: url(https://d3dma7a8zw52bz.cloudfront.net/assets/documents/document_body_rules-f0711254a4cc2b734e9317489d363ce2.gif);
+    }
+
+    .content-text {
+        padding:20px 30px 10px;
+    }
+
+    .rainbow-text {
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .ml1 {
+        font-weight: 200;
+        font-size: 2em;
+    }
+
+    .ml1 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+
+    .ml1 .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.1em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em;
+    }
+
+    .ml1 .line {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: gray;
+        transform-origin: 0 0;
+    }
+
+    .ml1 .line1 { top: 0; }
+    .ml1 .line2 { bottom: 0; }
+
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-mainbg fixed-top">
@@ -53,27 +113,138 @@
 
 <br/><br/><br/><br/><br/><br/>
 
-<div class="container">
-    <p>napisi osnovni raboti za programiranje</p>
-    <a class="m-5" href="http://www.crunchzilla.com/code-monster?fbclid=IwAR1GlRo5hX13Y_3wGNaTojze__REKQZXWk1Ke-Yay5xAcP5qjtqrM-MBS5c"> napisi </a>
-    <p><b>Програмирање</b> е процес на пишување наредби за компјутерот, односно создавање компјутерска програма како низа од наредби со користење на некој програмски јазик.</p>
-    <p><b>Програмски јазик</b> е формален јазик за презентација (нотација) на сметачки програми.</p>
-    <p>Програмата која е напишана во некој виш програмски јазик се нарекува <b>изворна програма</b> (source code) и пред извршување треба да се преведе на машински јазик.</p>
-    <p><b>Mашинскиот јазик</b> се состои од наредби кои се изразуваат само со нули и единици т.е. само со бинарни цифри). Тоа се симболички програмски јазици.  Бидејќи примената на машински јазик им е тешка на луѓето, развиени се виши програмски јазици кои имаат приказ на наредби слични на секојдневниот/природниот јазик. Пример: Fortran, Basic, Pascal, C (C++), Visual Basic, Java.</p>
-    <img class="img-fluid" src="img/13.png" >
-    <p><b>Фази во процесот на изработка на компјутерска програма:</b>
-    <h6> 1. Aнализа на проблемската ситуација и разгледување можни решенија.</h6>
-    <h6> 2. Aлгоритамско претставување на чекорите за можното решение на проблемската ситуација.</h6>
-    <h6> 3. Kодирање на алгоритамот
-        Запишување на алгоритамот како низа од инструкции во избран програмски јазик претставува програмски код кој се вика изворна програма.</h6>
-    <h6>4. Преведување на изворната програма во извршна програма
-        Изворната програма не е разбирлива за компјутерот. Таа мора да се преведе во машински јазик (во кој инструкциите се запишуваат со 1 и 0) за да биде разбрана и извршена од процесорот. Изворната програма преведена на машински јазик се вика извршна програма. За преведување на изворната програма во извршна програма се користат програми преведувачи.</h6>
-    <h6>5.Корекција на грешки (синтаксни, логички)
-        Преведувањето на изворната во извршна програма ретко кога е без грешки. Програмата преведувач го алармира програмерот за направените грешки во изворната програма кои мора да бидат поправени за инструкциите да можат да се преведат во машински јазик.</h6>
-    <h6>6. Тестирање на програмата.
-        Тестирањето на програмата се прави од страна на програмерот или корисниците за кои е наменета програмата. Програмата мора да работи правилно за различни вредности кои ги внесува корисникот или да оневозможи погрешно внесување вредности во програмата преку пораки и сл. до корисникот. Програмата треба да има соодветно решение за сите можни случаи (односно влез) преку испишување соодветна порака.
-        По успешното поминување на сите фази од процесот може да се каже дека програмата е готова и работи правилно.</h6>
-    </p>
+<div class="container text-center">
+    <div class="mb-5" style=" box-shadow: 0 20px 50px rgb(23, 32, 90); border: 2px solid #2a3cad;  margin-top: 100px; margin-right: 0.1px; background:rgba(255,255,255, 0.8);">
+        <div class="row text-center"  >
+            <div class="col">
+                <main role='main'>
+    <svg viewBox="0 300 200" >
+        <!-- Symbol with text -->
+        <symbol id="s-text">
+            <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text--line text-center" >
+                            Вовед
+            </text>
+        </symbol>
+
+        <!-- Clippath  with text -->
+        <clippath id="cp-text">
+            <text  text-anchor="middle" x="50%" y="50%" dy=".35em" class="text--line text-center">
+                Вовед
+            </text>
+        </clippath>
+
+        <!-- Group for shadow -->
+        <g clip-path="url(#cp-text)" class="shadow">
+            <rect width="100%" height="100%" class="anim-shape anim-shape--shadow"></rect>
+        </g>
+
+        <!-- Group with clippath for text-->
+        <g clip-path="url(#cp-text)" class="colortext">
+            <!-- Animated shapes inside text -->
+            <rect width="100%" height="100%" class="anim-shape"></rect>
+            <rect width="80%" height="100%" class="anim-shape"></rect>
+            <rect width="60%" height="100%" class="anim-shape"></rect>
+            <rect width="40%" height="100%" class="anim-shape"></rect>
+            <rect width="20%" height="100%" class="anim-shape"></rect>
+        </g>
+
+        <!-- Transparent copy of text to keep patterned text selectable -->
+        <use xlink:href="#s-text" class="text--transparent"></use>
+    </svg>
+                </main>
+            </div>
+        </div>
+
+
+        <div class="row justify-content-center">
+            <div class="col-4 mr-3">
+                <img class="embed-responsive-item" src="img/think.gif">
+
+            </div>
+            <div class="col-5 ml-5 mt-5 ">
+                <p class="text-justify">
+                    <b style="color: #e83e8c"> Програмски јазик</b> е формален јазик за презентација (нотација) на сметачки програми.
+                </p>
+                <p>Програмата која е напишана во некој виш програмски јазик се нарекува <b style="color: darkblue">изворна програма (source code)</b> и пред извршување треба да се преведе на машински јазик.
+                </p>
+
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-5 ml-5 mt-5 ">
+                <p class="text-justify">
+                    <b style="color: #fd7e14">Mашинскиот јазик</b> се состои од наредби кои се изразуваат само со нули и единици т.е. само со бинарни цифри). Тоа се симболички програмски јазици.  Бидејќи примената на машински јазик им е тешка на луѓето, развиени се виши програмски јазици кои имаат приказ на наредби слични на секојдневниот/природниот јазик. Пример: Fortran, Basic, Pascal, C (C++), Visual Basic, Java.
+                </p>
+            </div>
+
+            <div class="col-4 mr-3">
+                <img class="embed-responsive-item"src="img/voved.gif">
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-4 mr-3">
+                <div class="container">
+                    <blockquote class="quote-box" \>
+                        <p class="quotation-mark">
+                            “
+                        </p>
+                        <p class="quote-text">
+                            Talk is cheap. Show me the code.
+                        </p>
+                        <hr>
+                        <div class="blog-post-actions">
+                            <p class="blog-post-bottom pull-left">
+                                Linus Torvalds
+                            </p>
+
+                        </div>
+                    </blockquote>
+
+                </div>
+                <div class="container">
+                    <blockquote class="quote-box-pink" \>
+                        <p class="quotation-mark">
+                            “
+                        </p>
+                        <p class="quote-text">
+                            Programming today is a race between software engineers striving to build bigger and better idiot-proof programs,
+                            and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.
+                        </p>
+                        <hr>
+                        <div class="blog-post-actions">
+                            <p class="blog-post-bottom pull-left">
+                                Rick Cook, The Wizardry Compiled
+                            </p>
+
+                        </div>
+                    </blockquote>
+
+                </div>
+
+            </div>
+            <div class="col-5 ml-5 mt-5 m-5">
+                <p class="text-justify">
+                <li class="text-justify">Фази во процесот на изработка на компјутерска програма:</li>
+                <h6> 1. Aнализа на проблемската ситуација и разгледување можни решенија.</h6>
+                <h6> 2. Aлгоритамско претставување на чекорите за можното решение на проблемската ситуација.</h6>
+                <h6> 3. Kодирање на алгоритамот
+                    Запишување на алгоритамот како низа од инструкции во избран програмски јазик претставува програмски код кој се вика изворна програма.
+                </h6>
+                <h6>4. Преведување на изворната програма во извршна програма
+                    Изворната програма не е разбирлива за компјутерот. Таа мора да се преведе во машински јазик (во кој инструкциите се запишуваат со 1 и 0) за да биде разбрана и извршена од процесорот. Изворната програма преведена на машински јазик се вика извршна програма. За преведување на изворната програма во извршна програма се користат програми преведувачи.
+                </h6>
+                <h6>5.Корекција на грешки (синтаксни, логички)
+                    Преведувањето на изворната во извршна програма ретко кога е без грешки. Програмата преведувач го алармира програмерот за направените грешки во изворната програма кои мора да бидат поправени за инструкциите да можат да се преведат во машински јазик.
+                </h6>
+                <h6>6. Тестирање на програмата.
+                    Тестирањето на програмата се прави од страна на програмерот или корисниците за кои е наменета програмата. Програмата мора да работи правилно за различни вредности кои ги внесува корисникот или да оневозможи погрешно внесување вредности во програмата преку пораки и сл. до корисникот. Програмата треба да има соодветно решение за сите можни случаи (односно влез) преку испишување соодветна порака.
+                    По успешното поминување на сите фази од процесот може да се каже дека програмата е готова и работи правилно.
+                </h6>
+
+            </div>
+        </div>
+    </div>
 </div>
 
 <section class="mb-0 py-4 text-center text-white bg-info" >

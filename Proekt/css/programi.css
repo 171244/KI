@@ -1,0 +1,42 @@
+body{
+    background: #eee;
+
+}
+span{
+    font-size:18px;
+}
+
+.box{
+    padding:60px 0px;
+}
+
+.box-part{
+    background: #97a6ff;
+    border-radius:0;
+    padding:60px 10px;
+    margin:30px 0px;
+}
+.text{
+    margin:20px 0px;
+    font-family: 'Balsamiq Sans', cursive;
+    padding-top: 2px;
+    color: black;
+
+    size: 1.5rem;
+
+}
+
+.fa{
+    color:#4183D7;
+}
+#image{
+    height: 100px;
+    width: 100px;
+    margin: 2px;
+    padding-bottom: 5px;
+}
+.p{
+
+    align-content: center;
+
+}
