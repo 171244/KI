@@ -16,7 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <link href="css/coolheading.css" rel="stylesheet" rel="stylesheet">
     <link href="css/cardsLec1.css" rel="stylesheet" rel="stylesheet">
-    <link href="css/programi.css" rel="stylesheet" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Како работат програмите</title>
 
@@ -34,6 +33,7 @@
         font-family: 'Balsamiq Sans', cursive;
 
     }
+    html{font-family: 'Balsamiq Sans', cursive;}
     .text {
         min-height:auto;
         height:auto;
@@ -48,42 +48,118 @@
         padding:20px 30px 10px;
     }
 
-    .rainbow-text {
-        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    body{
+        background: #eee;
+
+    }
+    .span{
+        font-size: 15px;
+    }
+
+    .box{
+        padding:50px 0px;
+    }
+
+    .box-part{
+        background: #f5c6cb;
+        border-radius:0;
+        padding:20px 10px;
+        margin:30px 0px;
+    }
+    .text{
+        margin:10px 0px;
+        font-family: 'Balsamiq Sans', cursive;
+        padding-top: 2px;
+        color: black;
+
+        size: 1rem;
+
+    }
+
+    .fa{
+        color:#4183D7;
+    }
+    #image{
+        height: 100px;
+        width: 100px;
+        margin: 2px;
+        padding-bottom: 5px;
+    }
+    .p{
+
+        align-content: center;
+
+    }
+    .card-banner {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        background-color: #fff;
+        background-size: cover;
+        border-radius: 5px;
+    }
+    .card-banner .card-body {
+        background-size: cover;
+        position: relative;
+        z-index: 10;
+    }
+
+
+    /* overlay effects */
+    .overlay-cover {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+    .overlay {
+        background-color: rgba(0,0,0,0.65);
+        z-index: 10;
+        padding: 1.25rem;
+        color: #fff;
+    }
+    .overlay-grad {
+        position: relative;
+    }
+
+    .overlay-grad::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #e83e8c;
+        background: -webkit-gradient(linear, left top, right bottom, from(#007bff), to(#e83e8c));
+        background: linear-gradient(to bottom right, #007bff, #e83e8c);
+        opacity: .6;
+        transition: .5s;
+    }
+    .overlay-grad:hover:before{
+        opacity: .9;
+    }
+    .fancy-heading {
+        font-size: 160px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.1em;
+        letter-spacing:5px;
+    }
+
+    .animated_heading {
+        margin: 0;
+        font-size: 80px;
+        color: #fff;
+        background-size: auto 200%;
+        background-clip: text;
+        text-fill-color: transparent;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        animation: shine 8s linear infinite;
     }
-
-    .ml1 {
-        font-weight: 200;
-        font-size: 2em;
-    }
-
-    .ml1 .letter {
-        display: inline-block;
-        line-height: 1em;
-    }
-
-    .ml1 .text-wrapper {
-        position: relative;
-        display: inline-block;
-        padding-top: 0.1em;
-        padding-right: 0.05em;
-        padding-bottom: 0.15em;
-    }
-
-    .ml1 .line {
-        opacity: 0;
-        position: absolute;
-        left: 0;
-        height: 3px;
-        width: 100%;
-        background-color: gray;
-        transform-origin: 0 0;
-    }
-
-    .ml1 .line1 { top: 0; }
-    .ml1 .line2 { bottom: 0; }
 
 </style>
 
@@ -114,72 +190,61 @@
 </nav>
 
 <br/><br/><br/><br/><br/><br/>
-<div class="container mb-5">
+<div class="container">
     <div class="mb-5" style=" box-shadow: 0 20px 50px rgb(23, 32, 90); border: 2px solid #2a3cad;  margin-top: 100px; margin-right: 0.1px; background:rgba(255,255,255, 0.8);">
 
+        <div class="row justify-content-center">
+            <div class="row fancy-grid p-5" >
+                    <div class="fancy-heading">
+                        <h1 class="animated_heading" style="background-image:
+                        url(https://themegoods-cdn-pzbycso8wng.stackpathdns.com/musico/demo/wp-content/uploads/2018/10/ruvim-noga-711147-unsplash.jpg);">
+                            Програми</h1>
+                    </div>
+                </div>
+                <div class="col-lg-1" style="margin-left: 10px">
+                    <div class="text">
+                        <div class="content-text">
+                            <h3 style="color: deeppink">
+                                Што ќе научиме?
+                            </h3>
+                            <ul>
+                                <li>Како функционираат копјутерските програми?</li>
+                                <li>Кои се најпопуларни програмски јазици?</li>
 
-    <svg viewBox="0 300 200" >
-        <!-- Symbol with text -->
-        <symbol id="s-text">
-            <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text--line" >
-                Програми
-            </text>
-        </symbol>
-
-        <!-- Clippath  with text -->
-        <clippath id="cp-text">
-            <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text--line">
-                Програми
-            </text>
-        </clippath>
-
-        <!-- Group for shadow -->
-        <g clip-path="url(#cp-text)" class="shadow">
-            <rect width="100%" height="100%" class="anim-shape anim-shape--shadow"></rect>
-        </g>
-
-        <!-- Group with clippath for text-->
-        <g clip-path="url(#cp-text)" class="colortext">
-            <!-- Animated shapes inside text -->
-            <rect width="100%" height="100%" class="anim-shape"></rect>
-            <rect width="80%" height="100%" class="anim-shape"></rect>
-            <rect width="60%" height="100%" class="anim-shape"></rect>
-            <rect width="40%" height="100%" class="anim-shape"></rect>
-            <rect width="20%" height="100%" class="anim-shape"></rect>
-        </g>
-
-        <!-- Transparent copy of text to keep patterned text selectable -->
-        <use xlink:href="#s-text" class="text--transparent"></use>
-    </svg>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
         <div class="row justify-content-center">
             <div class="col-4 mr-3">
-                <img class="embed-responsive-item" src="img/programi.gif">
+                <img class="embed-responsive-item" src="https://mk0analyticsindf35n9.kinstacdn.com/wp-content/uploads/2018/12/developer-dribbble.gif?fbclid=IwAR09XiX8JmxSq7s9Sz57WyjQHIBui-s_8AZxtpzojLA8DJ35iUmZnQFuE2Q">
 
             </div>
-            <div class="col-5 ml-5 mt-5 ">
-                <p class="text-justify">
+            <div class="col-5 ml-5 ">
+                <p class="text-justify mt-lg-5" style="font-size: 20px">
                      Компјутерите може да изгледаат многу паметни, но тие всушност се само
                         кутии што ги следат упатствата многу брзо и прецизно.
                 </p>
-                <p> Како интелигентни луѓе,
+                <p style="font-size: 20px"> Како интелигентни луѓе,
                     можеме да ги натераме да вршат различни задачи со пишување програми или листи со инструкции.
                 </p>
 
             </div>
         </div>
-    <div class="container">
-        <li>
-            <b>Компјутерите не можат да мислат</b> - Компјутерот нема да стори ништо од себе. Се зависи од упатствата кои му ги дава компјутерскиот програмер.
-        </li>
-        <li>
-            <b>Напишете програма</b> - Може да му кажете на компјутерот што да прави со пишување збир на многу детални упатства наречени програма. Секоја инструкција треба да биде доволно мала за компјутерот да може да ја разбере.
-            Ако инструкциите не се точни, компјутерот нема да се однесува така како што сакате.
-        </li>
-        <li>
-            <b>Програмски јазици</b> - Компјутерите можат да следат само упатства на јазик што го разбираат. На програмерот му треба да избере кој јазик е најдобар за задачата.
-            Постојат огромен спектар на програмски јазици за да изберете. Секој може да се користи за различни задачи.
-            Еве некои од најпопуларните јазици и за што често се користат:
-        </li>
+    <div class="container mt-5">
+        <div class="card-banner  overlay-grad" style="height:280px; background-image: url('http://bootstrap-ecommerce.com/main/images/posts/1.jpg');">
+            <div class="card-body text-white">
+                <li class="card-text" style="font-size: 20px">Компјутерите не можат да мислат - Компјутерот нема да направи ништо од себе. Се зависи од упатствата кои му ги дава компјутерскиот програмер.</li>
+                <li class="card-text" style="font-size: 20px">Напишете програма - Може да му кажете на компјутерот што да прави со пишување збир на многу детални упатства наречени програма. Секоја инструкција треба да биде доволно мала за компјутерот да може да ја разбере.
+                    Ако инструкциите не се точни, компјутерот нема да се однесува така како што сакате.
+                </li>
+                <li class="card-text" style="font-size: 20px">Програмски јазици - Компјутерите можат да следат само упатства на јазик што го разбираат. На програмерот му треба да избере кој јазик е најдобар за задачата.
+                    Постојат огромен спектар на програмски јазици за да изберете. Секој може да се користи за различни задачи.
+                    Еве некои од најпопуларните јазици и за што често се користат:</li>
+            </div>
+        </div>
+
     </div>
 
             <div class="box1">
@@ -190,14 +255,14 @@
 
                         <div class="box-part text-center">
 
-                            <img id="image" src="img/Clogo.png">
+                            <img id="image" src="https://f0.pngfuel.com/png/120/705/c-logo-png-clip-art.png">
 
                             <div class="title">
-                                <h4>C</h4>
+                                <h4 style="font-size: 20px">C</h4>
                             </div>
 
                             <div class="text">
-                                <span>моќен јазик за градење компјутерски оперативни системи.</span>
+                                <span style="font-size: 20px">моќен јазик за градење компјутерски оперативни системи.</span>
                             </div>
                         </div>
                     </div>
@@ -207,13 +272,13 @@
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
                         <div class="box-part text-center">
-                                <img id="image" src="img/AdaLogo.png"/>
+                                <img id="image" src="https://i.vippng.com/png/small/222-2223378_ada-mascot-with-slogan-ada-programming-language-logo.png"/>
                             <div class="title">
-                                <h4>Ada</h4>
+                                <h4 style="font-size: 20px">Ada</h4>
                             </div>
 
                             <div class="text">
-                                <span>- се користи за контрола на вселенското летало, сателитите и авионите.
+                                <span  style="font-size: 20px">се користи за контрола на вселенското летало, сателитите и авионите.
                                     </span>
                             </div>
                         </div>
@@ -224,14 +289,14 @@
 
                         <div class="box-part text-center">
 
-                            <img id="image" src="img/JavaLogo.png"/>
+                            <img id="image" style="height: 150px;" src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png"/>
 
                             <div class="title">
-                                <h4>Java</h4>
+                                <h4 style="font-size: 20px">Java</h4>
                             </div>
 
                             <div class="text">
-                                <span>- работи на компјутери, мобилни телефони и таблети.</span>
+                                <span style="font-size: 20px">работи на компјутери, мобилни телефони и таблети.</span>
                             </div>
                         </div>
                         </div>
@@ -241,14 +306,14 @@
 
                         <div class="box-part text-center">
 
-                            <img id="image" src="img/ScratchLogo.png"/>
+                            <img id="image" src="https://www.qnscc.com/wp-content/uploads/2018/08/kisspng-scratch-logo-computer-programming-computer-softwar-5ae0b4840769c2.6633001815246757160304-1.jpg"/>
 
                             <div class="title">
-                                <h4>Scratch</h4>
+                                <h4 style="font-size: 20px">Scratch</h4>
                             </div>
 
                             <div class="text">
-                                <span>- визуелен јазик кој е идеален за учење програмирање. </span>
+                                <span style="font-size: 20px">визуелен јазик кој е идеален за учење програмирање. </span>
                             </div>
                         </div>
 
@@ -259,14 +324,14 @@
 
                         <div class="box-part text-center">
 
-                            <img id="image" src="img/MATLABlogo.png"/>
+                            <img id="image" src="https://www.mentesliberadas.com/wp-content/uploads/2019/11/mat-lab-principal-1200x750.jpg"/>
 
                             <div class="title">
-                                <h4>MATLAB</h4>
+                                <h4 style="font-size: 20px">MATLAB</h4>
                             </div>
 
                             <div class="text">
-                                <span>- идеален за програми што треба да извршат многу пресметки.</span>
+                                <span style="font-size: 20px">идеален за програми што треба да извршат многу пресметки.</span>
                             </div>
                         </div>
                     </div>
@@ -275,14 +340,14 @@
 
                         <div class="box-part text-center">
 
-                            <img id="image" src="img/RubyLogo.png"/>
+                            <img id="image" src="https://cdn.iconscout.com/icon/free/png-256/ruby-47-1175102.png"/>
 
                             <div class="title">
-                                <h4>Ruby</h4>
+                                <h4 style="font-size: 20px">Ruby</h4>
                             </div>
 
                             <div class="text">
-                                <span>- автоматски претвора многу информации во веб-страници.</span>
+                                <span style="font-size: 20px">- автоматски претвора многу информации во веб-страници.</span>
                             </div>
                         </div>
                     </div>
@@ -290,14 +355,14 @@
 
                     <div class="box-part text-center">
 
-                        <img id="image" src="img/JavaScriptLogo.jpg"/>
+                        <img id="image" src="https://www.elevano.com/wp-content/uploads/2018/10/Javascript-Programming-Jobs.jpg"/>
 
                         <div class="title">
-                            <h4>JavaScript</h4>
+                            <h4 style="font-size: 20px">JavaScript</h4>
                         </div>
 
                         <div class="text">
-                            <span>- јазик што се користи за изградба на интерактивни веб-страници.</span>
+                            <span  style="font-size: 20px">- јазик што се користи за изградба на интерактивни веб-страници.</span>
                         </div>
                     </div>
                 </div>
@@ -305,20 +370,20 @@
 
                     <div class="box-part text-center">
 
-                        <img id="image" src="img/pythonLogo.png"/>
+                        <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/1920px-Python_logo_and_wordmark.svg.png"/>
 
                         <div class="title">
-                            <h4>Python</h4>
+                            <h4 style="font-size: 20px">Python</h4>
                         </div>
 
                         <div class="text">
-                            <span>- јазик базиран на текст што може да се користи за градење секакви работи.</span>
+                            <span style="font-size: 20px">- јазик базиран на текст што може да се користи за градење секакви работи.</span>
                         </div>
                     </div>
                 </div>
 
                 </div>
-                <li>Сите програми конечно се претвораат во „бинарен код“, основен компјутерски јазик што користи само такви и нули.</li>
+                <li style="font-size: 20px">Сите програми конечно се претвораат во „бинарен код“, основен компјутерски јазик што користи само такви и нули.</li>
 
             </div>
         </div>

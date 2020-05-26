@@ -17,8 +17,6 @@
     <link href="css/coolheading.css" rel="stylesheet" rel="stylesheet">
     <link href="css/cardsLec1.css" rel="stylesheet" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-    <link href="css/gamesCards.css" rel="stylesheet" rel="stylesheet">
-    <link href="css/coolheading.css" rel="stylesheet" rel="stylesheet">
     <title>Игри</title>
 
 
@@ -34,6 +32,9 @@
         background-size: cover;
         font-family: 'Balsamiq Sans', cursive;
     }
+    html{
+        font-family: 'Balsamiq Sans', cursive;
+    }
     .text {
         min-height:auto;
         height:auto;
@@ -41,6 +42,7 @@
         border:1px solid #ddd; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: 15px 0; overflow:hidden;
         border-color: rgb(252, 227, 176);
         background-color: #ffffcc;
+        font-family: 'Balsamiq Sans', cursive;
         background-image: url(https://d3dma7a8zw52bz.cloudfront.net/assets/documents/document_body_rules-f0711254a4cc2b734e9317489d363ce2.gif);
     }
 
@@ -48,42 +50,37 @@
         padding:20px 30px 10px;
     }
 
-    .rainbow-text {
-        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+
+    .border-effect {
+        height:15px;
+        width:20%;
+        margin-top: 2px;
+        font-size: 3rem;
     }
 
-    .ml1 {
-        font-weight: 200;
-        font-size: 2em;
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
     }
 
-    .ml1 .letter {
-        display: inline-block;
-        line-height: 1em;
-    }
-
-    .ml1 .text-wrapper {
+    .item {
         position: relative;
-        display: inline-block;
-        padding-top: 0.1em;
-        padding-right: 0.05em;
-        padding-bottom: 0.15em;
-    }
-
-    .ml1 .line {
-        opacity: 0;
-        position: absolute;
-        left: 0;
-        height: 3px;
+        height: content-box;
+        overflow: hidden;
         width: 100%;
-        background-color: gray;
-        transform-origin: 0 0;
+
     }
 
-    .ml1 .line1 { top: 0; }
-    .ml1 .line2 { bottom: 0; }
+    .item img {
+        max-width: 100%;
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    .card{
+        height: content-box;
+    }
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-mainbg fixed-top">
@@ -120,42 +117,47 @@
             <div class="col-6">
                 <main role='main'>
                     <div aria-busy='true' aria-label='Loading, please wait.' data-text='2' role='progressbar'>
-                        <p>Games</p>
+                        <p>Игри</p>
                     </div>
                 </main>
             </div>
-            <div class="col-3 mt-5" >
-                <div class="text" >
+
+            <div class="col-3">
+                <div class="text">
                     <div class="content-text">
                         <h3 style="color: deeppink">
                             Што ќе научиме?
                         </h3>
-                        <ul style="font-size: 1.5rem">
-                            <b style="color: #fd7e14">Програмска игра</b> е видео игра која вклучува
-                            елементи на компјутерско програмирање, овозможувајќи му на играчот
-                            да насочува автономни единици во рамките на играта да ги следи командите
-                            на јазик за програмирање специфичен за доменот, честопати претставен како
-                            визуелен јазик за да се поедностави програмската метафора.
+                        <ul>
+                            <li>Што е програмска игра?</li>
+                            <li>Кои се најдобрите игри за кодирање?</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-5 ml-5 mt-5 ">
-            <p class="text-justify">
-            <li>        Програмските игри широко спаѓаат во две области: игри со еден играч каде што програмските
-            елементи или сочинуваат дел од целата puzzle game(игра загатки),
-            и мултиплеер игри каде автоматската програма на играчот е насочена против програмите на другите играчи.</li>
-            <li> Еве ги 9-те најдобри игри за кодирање за да ги подобрите вашите програмски вештини:</li>
-            </p>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <img class="embed-responsive-item m-lg-5" src="https://media1.giphy.com/media/3oEdv0v3FyAXdWt9gA/source.gif">
+            </div>
+            <div class="col-5 ml-5 mt-5 ">
+                <li style="font-size: 15px;"><b style="color: #fd7e14">Програмска игра</b> е видео игра која вклучува
+                елементи на компјутерско програмирање, овозможувајќи му на играчот
+                да насочува автономни единици во рамките на играта да ги следи командите
+                на јазик за програмирање специфичен за доменот, честопати претставен како
+                    визуелен јазик за да се поедностави програмската метафора.</li>
+                <li style="font-size: 15px">        Програмските игри широко спаѓаат во две области: игри со еден играч каде што програмските
+                    елементи или сочинуваат дел од целата puzzle game(игра загатки),
+                    и мултиплеер игри каде автоматската програма на играчот е насочена против програмите на другите играчи.</li>
+                <li style="font-size: 15px;"> Еве ги 9-те најдобри игри за кодирање за да ги подобрите вашите програмски вештини:</li>
+
+            </div>
         </div>
-
-
 
         <div class="container mb-4">
             <div class="card-deck">
-                <div class="card " style="height: 500px;width: 500px;">
+                <div class="card" style="height: 500px;width: 500px;">
                     <div class="item">
                         <img class="card-img-top" src="img/18.png" alt="Card image Codewars" >
                     </div>
@@ -171,7 +173,7 @@
 
                     </div>
                 </div>
-                <div class="card"  style="height: 500px;width: 500px;">
+                <div class="card" style="height: 500px;width: 500px;">
                     <div class="item">
                         <img class="card-img-top" src="img/16.png" alt="Card image Codingame">
                     </div>
@@ -183,6 +185,25 @@
                             и многу повеќе. Секоја загатка / предизвик има тема што го започнува забавниот фактор.</p>
                     </div>
                 </div>
+                <div class="card" style="height: 500px;width: 500px;">
+                    <div class="item">
+                        <img class="card-img-top" src="img/19.jpg" alt="Card image Vim Adventures">
+                    </div>
+                    <div class="border-effect bg-warning"></div>
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 2rem;">Vim Adventures</h4>
+                        <p class="card-text" style="font-size: 1.5rem;">Vim Adventures е забавен туторијал сличен на играта за да научите како да го користите  Vim,
+                            исклучително необичен, но исклучително моќен уредувач на текст, кој многу добрите
+                            програми сакаат да го користат.</p>
+                        <p class="card-text" style="font-size: 1.5rem;">Значи, додека Вим не е програмски јазик сам по себе, совладување на „Вим“ може да ви
+                            помогне да станете поефикасен програмер, па затоа го вклучив во овој напис.</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="card-deck">
+
                 <div class="card" style="height: 500px;width: 500px;">
                     <div class="item">
                         <img class="card-img-top" src="img/14r.png" alt="Card image Robocode">
@@ -197,24 +218,7 @@
                             Scala, C # и многу повеќе.</p>
                     </div>
                 </div>
-                <div class="card" style="height: 600px;width: 500px;">
-                    <div class="item">
-                        <img class="card-img-top" src="img/19.jpg" alt="Card image Vim Adventures">
-                    </div>
-                    <div class="border-effect bg-warning"></div>
-                    <div class="card-body">
-                        <h4 class="card-title" style="font-size: 2rem;">Vim Adventures</h4>
-                        <p class="card-text" style="font-size: 1.5rem;">Vim Adventures е забавен туторијал сличен на играта за да научите како да го користите  Vim,
-                            исклучително необичен, но исклучително моќен уредувач на текст, кој многу добрите
-                            програми сакаат да го користат.</p>
-                        <p class="card-text" style="font-size: 1.5rem;">Таа има огромна крива за учење, и затоа постојат програми како овие.</p>
-                        <p class="card-text" style="font-size: 1.5rem;">Значи, додека Вим не е програмски јазик сам по себе, совладување на „Вим“ може да ви
-                            помогне да станете поефикасен програмер, па затоа го вклучив во овој напис.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card-deck">
-                <div class="card" style="height: 100%;width: 100%;">
+                <div class="card" style="height: 500px;width: 500px;">
                     <div class="item">
                         <img class="card-img-top"src="img/23.jpg" alt="Card image Screeps">
                     </div>
@@ -223,27 +227,23 @@
                         <h4 class="card-title" style="font-size: 2rem;">Screeps</h4>
                         <p class="card-text" style="font-size: 1.5rem;">Screeps е MMO стратешка игра каде што користите JavaScript
                             за да го кодирате однесувањето на ентитетите во игра и да градите империја за себе.</p>
-                        <p class="card-text" style="font-size: 1.5rem;">Основната игра доаѓа со приватен сервер каде што можете
-                            да играте самостојно, плус 30  дена целосен пристап до официјалниот сервер.</p>
-                        <p class="card-text" style="font-size: 1.5rem;">После тоа, можете да продолжите да играте на официјалниот сервер
-                            со ограничен капацитет, што може да се подигне со месечна претплата.</p>
                     </div>
                 </div>
-                <div class="card" style="height: 100%;width: 100%;">
+                <div class="card" style="height: 500px;width: 500px;">
                     <div class="item">
                         <img class="card-img-top" src="img/20.jpg" alt="Card image TIS-100">
                     </div>
                     <div class="border-effect bg-warning"></div>
                     <div class="card-body">
                         <h4 class="card-title" style="font-size: 2rem;">TIS-100</h4>
-                        <p class="card-text"  style="font-size: 1.5rem;">„Тоа е програма за програмирање на јазик за составување што никогаш не сте ја барале!“.</p>
                         <p class="card-text" style="font-size: 1.5rem;">TIS-100 е видео игра како ниедна друга, принудувајќи да научите и да користите
                             подбивна верзија на кодирање на склопување на ниско ниво за да ги решите своите загатки.
-                            Оваа игра не е шега - тешко е, таа е отворена и има неверојатна вредност за
-                            повторување сè додека не станете толку фрустрирани и збунети што ќе ја деинсталирате во склоп на бес.</p>
                     </div>
                 </div>
-                <div class="card" style="height: 600px;width: 600px;">
+
+            </div>
+            <div class="card-deck">
+                <div class="card" style="height: 500px;width: 500px;">
                     <div class="item">
                         <img class="card-img-top" src="img/21.jpg" alt="Card image Shenzhen I/O">
                     </div>
@@ -253,11 +253,9 @@
                         <p class="card-text" style="font-size: 1.5rem;">Од истото студио зад TIS-100 доаѓа Shenzhen I/O, загатка игра
                             каде што имате задача да создадете поедноставени кола и да напишете
                             поедноставен асемблерски код што работи на споменатите кола.</p>
-                        <p class="card-text" style="font-size: 1.5rem;">Помеѓу двата натпревари, Shenzhen I/O е полесно да се навлезе во и попријатно,
-                            но исто толку задоволително комплексно.</p>
                     </div>
                 </div>
-                <div class="card" style="height: 100%;width: 100%;">
+                <div class="card" style="height: 500px;width: 500px;">
                     <div class="item">
                         <img class="card-img-top" src="img/17.png" alt="Card image Codecombat">
                     </div>
@@ -265,32 +263,26 @@
                     <div class="card-body">
                         <h4 class="card-title" style="font-size: 2rem;">Codecombat</h4>
                         <p class="card-text" style="font-size: 1.5rem;">Codecombat е друга веб-апликација за загатки и предизвици слични
-                            на играта што можат да се решат само со пишување код.</p>
-                        <p class="card-text" style="font-size: 1.5rem;">Но, со оглед на тоа што Codingame е позабавен, Codecombat има
-                            значајно образование наклонето со „Училишна верзија“ што наставниците можат да
-                            ги користат за да им помогнат на своите студенти да научат како да кодираат.</p>
-                        <p class="card-text" style="font-size: 1.5rem;"> Што се однесува до ова пишување, достапни се три патеки за курсеви:
-                            компјутерски науки, развој на веб и развој на игри.</p>
+                            на играта што можат да се решат само со пишување код.
+                            Наставниците можат да ја користат за да им помогнат на своите студенти да научат како да кодираат.</p>
+
                     </div>
                 </div>
-                <div class="card" style="height: 100%;width: 100%;">
-                <div class="item">
-                    <img class="card-img-top" src="img/22.jpg" alt="Card image Human Resource Machine">
+                <div class="card" style="height: 500px;width: 500px;">
+                    <div class="item">
+                        <img class="card-img-top" src="img/22.jpg" alt="Card image Human Resource Machine">
+                    </div>
+                    <div class="border-effect bg-warning"></div>
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 2rem;">Human Resource Machine</h4>
+                        <p class="card-text" style="font-size: 1.5rem;">Оваа игра се однесува на решавање на загатки
+                            преку визуелно програмирање, дури и до кога треба да се осврнеме на концепти
+                            како логички проток и управување со меморијата - но претставени на лесен за разбирање,
+                            канцелариски-тематски начин.</p>
+                    </div>
                 </div>
-                <div class="border-effect bg-warning"></div>
-                <div class="card-body">
-                    <h4 class="card-title" style="font-size: 2rem;">Human Resource Machine</h4>
-                    <p class="card-text" style="font-size: 1.5rem;">Во машината за човечки ресурси, играте како канцелариски работник кој ги завршува
-                        задачите комбинирајќи различни инструкции заедно.</p>
-                    <p class="card-text" style="font-size: 1.5rem;">Во извесна смисла, оваа игра се однесува на решавање на загатки
-                        преку визуелно програмирање, дури и до кога треба да се осврнеме на концепти
-                        како логички проток и управување со меморијата - но претставени на лесен за разбирање,
-                        канцелариски-тематски начин.</p>
-                </div>
-            </div>
-            </div>
 
-        </div>
+            </div>
 
 </div>
 </div>

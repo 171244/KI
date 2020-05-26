@@ -80,6 +80,94 @@
 
     .ml1 .line1 { top: 0; }
     .ml1 .line2 { bottom: 0; }
+    @import url("https://fonts.googleapis.com/css?family=Marvel:400,700");
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Balsamiq Sans', cursive;
+
+
+    }
+
+    #info {
+
+        padding: 1rem 0;
+    }
+
+    .row {
+        width: 100%;
+        max-width: 45rem;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    .card {
+        display: inline-block;
+        height: content-box;
+        width: 45%;
+        padding: 4rem 1rem 7rem 1rem;
+        background-color: teal;
+        position: relative;
+        border:0px !important;
+    }
+    .card:after {
+        content: "";
+        display: block;
+        width: 0px;
+        height: 0px;
+        background-color: skyblue;
+        top: 0px;
+        right: 0px;
+        border-bottom: 20px solid #006767;
+        border-left: 20px solid #006767;
+        border-right: 20px solid yellow;
+        border-top: 20px solid yellow;
+        position: absolute;
+        -webkit-filter: drop-shadow(-5px 5px 3px rgba(0, 0, 0, 0.5));
+        filter: drop-shadow(-5px 5px 3px rgba(0, 0, 0, 0.5));
+    }
+    .card:before {
+        content: "";
+        display: block;
+        width: 0px;
+        height: 0px;
+        border-top: 40px solid #006767;
+        border-right: 40px solid #006767;
+        border-left: 40px solid yellow;
+        border-bottom: 40px solid yellow;
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+        -webkit-filter: drop-shadow(7px -7px 5px rgba(0, 0, 0, 0.5));
+        filter: drop-shadow(7px -7px 5px rgba(0, 0, 0, 0.5));
+        margin-right: 10%;
+    }
+    .card:nth-of-type(1) {
+        margin-right: 9%;
+    }
+    .card h2 {
+        color: snow;
+        margin-bottom: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+    .card p {
+        color: snow;
+        font-size: 15px;
+        line-height: 140%;
+    }
+
+    .ftr{
+        text-align: center;
+    }
+
+
 
 </style>
 
@@ -158,10 +246,10 @@
 
         <div class="row justify-content-center">
             <div class="col-4 mr-3">
-                <img src="img/voved2.gif" >
+                <img src="img/https://i.pinimg.com/originals/bb/0c/c7/bb0cc783196fa9b2119864ff90eb5702.gif?fbclid=IwAR1uZ1cLtXjE5IugsW1lNEAnWk3yvZTXyMiFvnDaY-itbI5zYCWm5xWqrsY" >
             </div>
             <div class="col-5 ml-5 mt-5 ">
-                <li class="text-justify">
+                <li class="text-justify" style="font-size: 20px">
                     Програмерот мора да научи да размислува како компјутер. Сите задачи мора да се поделат на мали парчиња за да можат лесно да се следат
                     и невозможно да се погреши.
                 </li>
@@ -170,20 +258,20 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-7 mt-5">
-                <li class="text-justify">
+                <li class="text-justify" style="font-size: 20px">
                     Размислувај како робот - замислете кафуле каде келнерот е робот, роботот има едноставен компјутерски мозок и треба да му се каже како да се извлече од кафе-кујната за да им служи храна на вечера.
                 </li>
             </div>
             <div class="col-4 mr-3">
-            <img class="m-3"  src="img/think2.gif" >
-             </div>
+                <img class="m-3"  src="https://www.lcieducation.com/~/media/images/lcieducation/portfolio/carroussel/512x250-blogue5decembre.ashx?fbclid=IwAR2fZkk4H5-_HQfIVxtcTag8nlfEpO0AoByxmv9xlYbg2IV-lJBT38XVWus" >
+            </div>
         </div>
         <div class="row justify-content-center">
-                <div class="row mt-3">
-            <div class="col">
-                <p class="font-italic" style="color: orange">Прво, процесот треба да се подели на едноставни задачи што компјутерот може да ги разбере.</p>
+            <div class="row mt-3">
+                <div class="col">
+                    <p class="font-italic" style="color: orange;font-size: 20px">Прво, процесот треба да се подели на едноставни задачи што компјутерот може да ги разбере.</p>
+                </div>
             </div>
-                 </div>
         </div>
 
         <div class="row justify-content-center">
@@ -193,12 +281,11 @@
                         <div class="card-header-pink">
                             <h1 class="card-heading">Програма за роботи на келнери 1</h1>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" style="font-size:15px">
                             <p class="card-p ">1. Соберете храна;</p>
                             <p class="card-p">2. Преместете од кујната до масата;</p>
                             <p class="card-p">3. Ставете ја храната долу.</p>
-                            <h6 class="text-secondary">Користејќи ја оваа програма, роботот ја зграпчува храната од чинијата, се урива директно низ ѕидот на кујната во просторијата за јадење и ја става храната на подот.
-                                Инструкциите не се јасни: заборавивме да му кажеме на роботот да ја користи вратата. Можеби им изгледа очигледно на луѓето, но компјутерите не можат сами да мислат
+                            <h6 class="text-secondary">Инструкциите не се јасни: заборавивме да му кажеме на роботот да ја користи вратата. Можеби им изгледа очигледно на луѓето, но компјутерите не можат сами да мислат
                             </h6>
                         </div>
                     </div>
@@ -212,11 +299,8 @@
                         </div>
                         <div class="card-body">
                             <p class="card-p">1. Подигнете ја чинијата со храна на неа;</p>
-                            <p class="card-p">2. Преместете од кујна во трпезариска маса така што :
-                                - Поминете на вратата помеѓу кујната и трпезаријата
-                                - Поместете од вратата до масата;</p>
+                            <p class="card-p">2. Поминете низ вратата помеѓу кујната и трпезаријата</p>
                             <p class="card-p">3. Ставете ја чинијата долу на масата пред вечера.</p>
-                            <h6 class="text-secondary">Овој пат му рековме на келнерот робот да ја користи вратата од кујна. Поминува низ вратата, но потоа ја удира кафе мачката, патува и ја крши чинијата на подот.</h6>
                             <h6 class="text-secondary">Оваа програма сè уште не е совршена.
                                 Роботот не знае како да се справи со пречките како мачката. Програмата треба да му даде на роботот уште подетални упатства за да може безбедно да се движи.
                             </h6>
@@ -232,12 +316,9 @@
                         </div>
                         <div class="card-body">
                             <p class="card-p"> 1. Соберете ја чинијата со храна на неа држејќи ја на иста висина во секое време;</p>
-                            <p class="card-p">2. Премести од масата на кујната до трпезаријата :
-                                - Помини низ вратата помеѓу кујната и просторијата за јадење проверувајќи ги пречките околу нив…;</p>
+                            <p class="card-p">2. Поминете низ вратата помеѓу кујната и просторијата за јадење проверувајќи ги пречките околу нив…;</p>
                             <p class="card-p">3. Ставете ја чинијата долу на масата пред вечера.</p>
-                            <h6 class="text-secondary">Во оваа верзија на програмата, роботот успешно ја доставува храната до масата избегнувајќи какви било пречки.
-                                Но, откако ја спушти чинијата долу, роботот останува да стои на масата додека храната се натрупува во кујната.
-                                Конечно, роботот може безбедно да ја доставува храната. Но, заборавивме да му дадеме упатства да се врати во кујната и да ја земе следната чинија.
+                            <h6 class="text-secondary">Конечно, роботот може безбедно да ја доставува храната. Но, заборавивме да му дадеме упатства да се врати во кујната и да ја земе следната чинија.
                             </h6>
 
                         </div>

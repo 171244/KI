@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Balsamiq Sans', cursive;
 }
 
 button:focus {
@@ -131,7 +131,7 @@ img {
 
 .box1 p {
     font-size: 2rem;
-    font-family: "helveticaregular";
+    font-family: 'Balsamiq Sans', cursive;
     color: rgba(255, 255, 255, 0.7);
 }
 

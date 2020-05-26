@@ -10,7 +10,6 @@
     <script src="https://unpkg.com/jquery"></script>
     <script src="https://surveyjs.azureedge.net/1.7.6/survey.jquery.js"></script>
     <link href="https://surveyjs.azureedge.net/1.7.6/modern.css" type="text/css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <title>Тест 3</title>
 </head>
 <body>
@@ -22,47 +21,6 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        font-family: 'Balsamiq Sans', cursive;
-    }
-
-
-    #box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: auto;
-        height: auto;
-        color: white;
-        font-size: 2.5rem;
-    }
-    .gradient-border {
-        --borderWidth: 3px;
-        position: relative;
-        border-radius: var(--borderWidth);
-    }
-    .gradient-border:after {
-        content: '';
-        position: absolute;
-        top: calc(-1 * var(--borderWidth));
-        left: calc(-1 * var(--borderWidth));
-        height: calc(100% + var(--borderWidth) * 2);
-        width: calc(100% + var(--borderWidth) * 2);
-        background: linear-gradient(60deg, #c47c33, #cc5c45, #b36078, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-        border-radius: calc(2 * var(--borderWidth));
-        z-index: -1;
-        animation: animatedgradient 15s ease alternate infinite;
-        background-size: 300% 300%;
-    }
-    @keyframes animatedgradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
     }
 </style>
 
@@ -93,7 +51,7 @@
 </nav>
 
 <div class="container mt-5 mb-lg-5">
-    <div class="row pb-5 justify-content-center gradient-border" id="box" style="box-shadow: 0 20px 50px rgb(23, 32, 90); margin-top: 100px; margin-right: 0.1px; background:rgba(255,255,255, 0.8);">
+    <div class="row pb-5 justify-content-center " style="box-shadow: 0 20px 50px rgb(23, 32, 90); border: 2px solid #2a3cad; margin-top: 100px; margin-right: 0.1px; background:rgba(255,255,255, 0.8);">
         <p class="text-muted mt-5 display-4"><small style="color: rgb(26, 179, 148);">КАКО РАБОТАТ ПРОГРАМИТЕ</small></p>
         <div id="surveyElement" style="display:inline-block;width:80%;"></div>
         <div id="surveyResult"></div>
